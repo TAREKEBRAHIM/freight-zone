@@ -216,6 +216,30 @@ const progressItems = ref([
   border-radius: 10px;
 }
 
+
+
+.image-large,
+.image-small {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-large img,
+.image-small img {
+  width: 100%;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.image-large img:hover,
+.image-small img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+
+
 /* Info section (right column) styles */
 .info-section {
   flex: 2;
