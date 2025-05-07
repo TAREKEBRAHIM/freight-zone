@@ -77,19 +77,6 @@ const services = [
   color: red;
 }
 
-.section-subtitle {
-  font-size: 20px;
-  font-weight: 600;
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-  font-family: "poppins-bold";
-}
-
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

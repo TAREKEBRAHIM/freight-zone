@@ -1,9 +1,11 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" aria-labelledby="footer-title">
     <div class="container">
+      <h2 id="footer-title" class="visually-hidden">Footer Navigation and Contact Information</h2>
+
       <div class="footer-container">
         <!-- Logo and Description -->
-        <div class="footer-section">
+        <div class="footer-section" aria-label="About FreightZone">
           <div class="logo">
             <img src="../assets/imgs/logo.png" alt="FreightZone Logo" />
           </div>
@@ -13,7 +15,7 @@
         </div>
 
         <!-- Our Company -->
-        <div class="footer-section">
+        <nav class="footer-section" aria-label="Our Company">
           <h3>Our Company</h3>
           <ul>
             <li><a href="#">About us</a></li>
@@ -21,50 +23,60 @@
             <li><a href="#">Partners & Certifications</a></li>
             <li><a href="#">Reviews & Awards</a></li>
           </ul>
-        </div>
+        </nav>
 
         <!-- Contact Us -->
-        <div class="footer-section">
+        <section class="footer-section" aria-label="Contact Information">
           <h3>Contact Us</h3>
           <ul>
-            <li>E: info@FreightZone.com</li>
-            <li>P: +25 3692 3256</li>
-            <li>T: 1-900-322-8422</li>
+            <li><strong>Email:</strong> <a href="mailto:info@FreightZone.com">info@FreightZone.com</a></li>
+            <li><strong>Phone:</strong> +25 3692 3256</li>
+            <li><strong>Toll-Free:</strong> 1-900-322-8422</li>
           </ul>
-        </div>
+        </section>
 
         <!-- Our Address -->
-        <div class="footer-section">
+        <section class="footer-section" aria-label="Our Address">
           <h3>Our Address</h3>
-          <p>
+          <address>
             365 Hilton Street KYU 3269<br />
             London, United Kingdom
-          </p>
+          </address>
           <a href="#" class="view-link">View all locations</a>
-        </div>
+        </section>
       </div>
 
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>Copyright © 2024 FreightZone. All Rights Reserved.</p>
-        <div class="footer-links">
+        <p>&copy; 2024 FreightZone. All Rights Reserved.</p>
+        <nav class="footer-links" aria-label="Legal Links">
           <a href="#">Terms & Conditions</a>
           <a href="#">Privacy Policy</a>
-        </div>
+        </nav>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
+// No JS needed
 </script>
 
 <style scoped>
+/* Visually hidden for accessibility heading */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .footer {
   background-color: #111;
   color: #ccc;
   font-size: 14px;
 }
-
 
 .footer-container {
   display: grid;
@@ -134,12 +146,6 @@
   margin-right: 10px;
 }
 
-.logo span {
-  color: #e63946;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .description {
   color: #74787C;
   font-size: 16px;
@@ -154,22 +160,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-bottom p {
   margin: 0;
-  margin-bottom: 10px;
   color: #fff;
-}
-
-.footer-section p {
-  color: #74787C;
-  font-size: 16px;
 }
 
 .footer-links {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -182,26 +184,34 @@
   color: #74787C;
 }
 
-/* Mobile responsive adjustments */
+address {
+  font-style: normal;
+  color: #74787C;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns: 1fr; 
-    gap: 40px; 
+    grid-template-columns: 1fr;
+    gap: 40px;
     padding-top: 20px;
   }
 
   .footer-section h3::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
     left: 43%;
-    width: 30px;
-    height: 2px;
-    background-color: #e63946;
   }
 
-  .footer-section p {
+  .footer-section p,
+  .description,
+  address {
     margin-top: 30px;
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+    text-align: center;
   }
 
   .footer {
@@ -214,7 +224,6 @@
 
   .footer-section h3 {
     font-size: 18px;
-    margin-bottom: 10px;
   }
 
   .footer-section ul li {
@@ -233,19 +242,13 @@
   }
 
   .footer-links {
+    justify-content: center;
     gap: 15px;
     margin-top: 15px;
   }
 
   .logo img {
     height: 40px;
-  }
-
-  .description {
-    width: 100%;
-    font-size: 14px;
-    line-height: 22px;
-    margin-top: 10px;
   }
 }
 </style>

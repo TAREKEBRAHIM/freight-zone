@@ -7,7 +7,6 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
-
     <!-- Toggle Button for Mobile (Always visible on mobile) -->
     <button 
       v-if="isMobile" 
@@ -15,13 +14,11 @@
       @click="toggleInfoCard">
       {{ toggleButtonText }}
     </button>
-
     <div v-show="!isMobile || isInfoCardVisible" class="info-card">
       <h3>Opening Hours</h3>
       <div class="work-days">
         <span>Workdays:</span> <span>9:00 - 20:00</span>
       </div>
-
       <div class="work-days">
         <span>Sunday:</span> <span>Close Office</span>
       </div>

@@ -6,8 +6,7 @@
         <span><font-awesome-icon icon="truck" class="icon-style" aria-hidden="true" /></span>
         Testimonials
       </h2>
-
-      
+ 
       <h1 class="section-title">
         What Our Customers Say About FreightZone
       </h1>
@@ -29,7 +28,6 @@
 
           <!-- Testimonial text -->
           <p class="testimonial-text">"{{ testimonial.text }}"</p>
-
           <!-- User info -->
           <div class="testimonial-user">
             <!-- User image (conditionally rendered if available) -->
@@ -152,14 +150,8 @@ const testimonials = [
   .section-subtitle {
     font-size: 18px;
   }
-
-
   .testimonial-text {
     font-size: 14px;
-
-
   }
-
-
 }
 </style>

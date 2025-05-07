@@ -3,7 +3,8 @@
     <div class="container">
 
       <h2 class="section-subtitle">
-        <span><font-awesome-icon icon="cogs" class="icon-style" /></span>
+        <span>          <font-awesome-icon icon="truck" class="icon-style" aria-hidden="true" />
+        </span>
         Our Work Process
       </h2>
 
@@ -68,19 +69,17 @@ const workers = [
 }
 
 
-.section-subtitle {
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-
 .workers {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
+
+h2 span {
+    color: red;
+    margin-right: 5px;
+  }
 
 /* Individual card styling */
 .worker-card {

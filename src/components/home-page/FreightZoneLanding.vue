@@ -6,7 +6,10 @@
         
         <!-- Hero Content -->
         <div class="hero-content">
-          <h5><span><font-awesome-icon icon="truck" /></span>Welcome to FreightZone</h5>
+          <h5 class="section-subtitle">
+  <span><font-awesome-icon icon="truck" /></span>
+  Welcome to FreightZone
+</h5>
 
           <h1>FreightZone: Easy Shipping Across Australia</h1>
           <p>
@@ -16,7 +19,6 @@
 
           <!-- Estimate Request Form: This form allows users to request a shipping estimate -->
           <form class="estimate-form">
-         
             <div class="form-header">
               <h3>Request Estimate</h3>
             </div>
@@ -79,14 +81,16 @@
   padding: 60px 60px;
   color: white;
 }
-
-.hero-content h5 span {
-  margin-right: 5px;
-}
-
-.hero-content h5 {
+.section-subtitle {
   font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
 }
+
 
 .quote-btn {
   background-color: #ef233c;
@@ -111,7 +115,6 @@
   font-family: 'poppins-regular';
 }
  
-/* hero section start */
 
 /* Form header style start */
 

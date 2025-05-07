@@ -1,28 +1,34 @@
 <template>
   <div class="container">
-    <div class="About">
-      <div class="image">
+    <div class="about-section">
+      <div class="about-image">
         <img src="@/assets/imgs/delivery-man.png" alt="delivery-man-Image" />
       </div>
-      <div class="text-section">
-        <p><span> <font-awesome-icon icon="truck" class="icon-style" />About FreightZone</span></p>
-        <h2 class="section-title">Fast, Secure, and Transparent <br>Logistics Services</h2>
+      <div class="about-content">
+        <p>
+          <h5 class="section-subtitle">
+  <span><font-awesome-icon icon="truck" class="section-icon" /></span>
+  Welcome to FreightZone
+</h5>
+        </p>
+        <h2 class="section-title">Fast, Secure, and Transparent <br />Logistics Services</h2>
 
-        <div class="text-item" v-for="(item, index) in textItems" :key="index">
-          <img :src="item.image" alt="Text Image" class="text-image" />
-          <div class="text-content">
+        <div class="feature-item" v-for="(item, index) in textItems" :key="index">
+          <img :src="item.image" alt="Text Image" class="feature-image" />
+          <div class="feature-text">
             <h3>{{ item.title }}</h3>
             <p>{{ item.paragraph }}</p>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import boxImg from '@/assets/imgs/box.png';
 import contactImg from '@/assets/imgs/contact.png';
+
 export default {
   data() {
     return {
@@ -53,55 +59,50 @@ export default {
 };
 </script>
 
-
 <style scoped>
-.About {
+.about-section {
   display: flex;
   justify-content: space-between;
-
   margin: 50px 0;
 }
 
-.image {
-  width: 34%;
+.about-image {
+  width: 40%;
 }
 
-.image img {
+.about-image img {
   width: 100%;
   height: auto;
   border-radius: 16px;
 }
 
-
-.icon-style {
+.section-icon {
   color: red;
   font-size: 16px;
   margin-right: 8px;
 }
 
-.text-section {
-  gap: 15px;
+
+.about-content {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-
-.text-section p {
+.about-content p {
   font-size: 20px;
   margin: 0;
   color: #333333;
   font-family: 'poppins-bold';
 }
 
-
-.text-item {
+.feature-item {
   display: flex;
   align-items: center;
   font-family: "poppins-regular";
-
 }
 
-.text-item img {
+.feature-item img {
   width: 70px;
   height: 70px;
   object-fit: cover;
@@ -110,30 +111,26 @@ export default {
   padding: 10px;
 }
 
-.text-item h3 {
+.feature-item h3 {
   font-size: 24px;
   margin: 0;
   padding-bottom: 5px;
   font-family: "poppins-bold";
 }
 
-.text-item p {
+.feature-item p {
   font-size: 16px;
   color: #74787C;
   padding-bottom: 15px;
   width: 445px;
   line-height: 26px;
   font-family: 'poppins-regular';
-
 }
 
-
-.text-content {
+.feature-text {
   display: flex;
   flex-direction: column;
-
 }
-
 
 /* Responsive design */
 
@@ -142,35 +139,29 @@ export default {
     max-width: 100%;
   }
 
-  .About {
+  .about-section {
     flex-direction: column;
     gap: 15px;
     display: flex;
   }
 
-  .text-item p {
+  .feature-item p {
     width: fit-content;
-
-
   }
 
-  .image {
+  .about-image {
     margin-top: 30px;
     width: 85%;
-
   }
 
-
-  .text-section p {
+  .about-content p {
     text-align: center;
     font-size: 16px;
-
   }
 
-  .text-section h2 {
+  .about-content h2 {
     text-align: center;
     font-size: 28px;
-
   }
 }
 </style>

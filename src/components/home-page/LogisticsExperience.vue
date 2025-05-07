@@ -1,58 +1,48 @@
 <template>
- <section class="logistics">
+  <section class="logistics">
     <div class="container">
       <div class="logistics-container">
 
-        <div class="experience-section">
+        <!-- Experience Section -->
+        <div class="experience-block">
           <div class="top-row">
-            
-            <div class="left-sec">
+            <div class="experience-summary">
               <div class="experience-text">
                 <h2>25+</h2>
                 <p>Years of<br>experience</p>
               </div>
             </div>
-          
-            <div class="image-large">
-              <img src="@/assets/imgs/Airplane.png" alt="Airplane">
+            <div class="image-primary">
+              <img src="@/assets/imgs/Airplane.png" alt="Airplane" />
             </div>
           </div>
-        
-          <!-- Bottom Row with Two Small Images -->
-        
+
           <div class="bottom-row">
-           
-            <div class="image-small">
-              <img src="@/assets/imgs/truck.png" alt="Truck">
+            <div class="image-secondary">
+              <img src="@/assets/imgs/truck.png" alt="Truck" />
             </div>
-           
-            <div class="image-small">
-              <img src="@/assets/imgs/containers.png" alt="Containers">
+            <div class="image-secondary">
+              <img src="@/assets/imgs/containers.png" alt="Containers" />
             </div>
-       
           </div>
         </div>
 
+        <!-- Info Section -->
         <div class="info-section">
-       
-          <!-- Subtitle with Icon -->
           <h5 class="section-subtitle">
-            <span><font-awesome-icon icon="truck" class="icon-style" /></span> Our Work Process
+            <span><font-awesome-icon icon="truck" class="subtitle-icon" /></span>
+            Our Work Process
           </h5>
 
-          <!-- Title and Description -->
-       
-          <h2 class="section-title" >Experience Seamless Logistics with FreightZone</h2>
+          <h2 class="section-title">Experience Seamless Logistics with FreightZone</h2>
           <p>
-            At FreightZone, we specialize in providing top-tier domestic shipping solutions across Australia. 
-            From reliable freight services to express deliveries, we connect customers with drivers for a smooth 
+            At FreightZone, we specialize in providing top-tier domestic shipping solutions across Australia.
+            From reliable freight services to express deliveries, we connect customers with drivers for a smooth
             and efficient shipping experience. Our 25+ years of expertise ensure every shipment is handled with care and precision.
           </p>
 
-          <!-- Progress Bars -->
-          <div class="progress-bars">
-       
-            <div class="progress-bar" v-for="(item, index) in progressItems" :key="index">
+          <div class="skills-progress-group">
+            <div class="skills-progress-item" v-for="(item, index) in progressItems" :key="index">
               <label>{{ item.label }}</label>
               <div class="progress-container">
                 <div class="progress" :style="{ width: item.value + '%' }">
@@ -62,16 +52,15 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-// Importing reactive reference from Vue
 import { ref } from 'vue'
 
-// List of progress items used in the progress bar section
 const progressItems = ref([
   { label: 'FREIGHT TRUCK SHIPPING', value: 92 },
   { label: 'MOTORCYCLE DELIVERIES', value: 82 },
@@ -85,8 +74,7 @@ const progressItems = ref([
   background-color: #F3F7FF;
 }
 
-
-.icon-style {
+.subtitle-icon {
   color: #ed1c24;
 }
 
@@ -101,7 +89,7 @@ const progressItems = ref([
   gap: 30px;
 }
 
-.experience-section {
+.experience-block {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -119,7 +107,7 @@ const progressItems = ref([
   gap: 5px;
 }
 
-.left-sec {
+.experience-summary {
   background-color: #FC153B;
   padding: 45px;
   border-radius: 10px;
@@ -151,19 +139,13 @@ const progressItems = ref([
   font-weight: bold;
 }
 
-.image-large {
+.image-primary {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.experience-images {
-  flex: 2 1 500px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.image-large img {
+.image-primary img {
   width: 100%;
   max-width: 315px;
   border-radius: 10px;
@@ -175,44 +157,37 @@ const progressItems = ref([
   gap: 5px;
 }
 
-.right-sec {
-  padding: 20px;
-  gap: 20px;
-  justify-content: center;
-  background: #ffffff;
-}
-
-.image-small {
+.image-secondary {
   flex: 1;
   overflow: hidden;
   border-radius: 10px;
 }
-.image-small img {
+
+.image-secondary img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.image-large,
-.image-small {
+.image-primary,
+.image-secondary {
   overflow: hidden;
   position: relative;
 }
 
-.image-large img,
-.image-small img {
+.image-primary img,
+.image-secondary img {
   width: 100%;
   transition: transform 0.3s ease;
   display: block;
 }
 
-.image-large img:hover,
-.image-small img:hover {
+.image-primary img:hover,
+.image-secondary img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-
 
 .info-section {
   flex: 2;
@@ -233,18 +208,18 @@ const progressItems = ref([
   line-height: 26px;
 }
 
-.progress-bars {
+.skills-progress-group {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.progress-bar {
+.skills-progress-item {
   margin-bottom: 15px;
 }
 
-.progress-bar label {
+.skills-progress-item label {
   font-size: 16px;
   font-weight: 500;
   font-family: 'rlway-regular';
@@ -258,7 +233,6 @@ const progressItems = ref([
   margin-top: 5px;
   position: relative;
 }
-
 
 .progress {
   background-color: #ff4d4f;
@@ -290,11 +264,11 @@ const progressItems = ref([
     flex-direction: column;
   }
 
-  .image-large img {
+  .image-primary img {
     max-width: 100%;
   }
 
-  .image-small img {
+  .image-secondary img {
     height: auto;
   }
 
@@ -308,7 +282,7 @@ const progressItems = ref([
     text-align: center;
   }
 
-  .progress-bar label {
+  .skills-progress-item label {
     font-size: 10px;
   }
 
