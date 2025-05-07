@@ -22,7 +22,7 @@
         >
 
         <img
-            src="../assets/image.png"
+            src="@/assets/imgs/Image.png"
             alt="Quote icon"
             loading="lazy"
           />
@@ -52,9 +52,9 @@
 </template>
 <script setup>
 // Import user images (static assets)
-import walker from '@/assets/walker.png'
-import smith from '@/assets/smith.png'
-import olivia from '@/assets/Carter.png'
+import walker from '@/assets/imgs/walker.png'
+import smith from '@/assets/imgs/smith.png'
+import olivia from '@/assets/imgs/Carter.png'
 
 // Testimonials data array
 const testimonials = [
@@ -86,24 +86,12 @@ const testimonials = [
   text-align: center;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 .icon-style {
   color: #FC153B;
 
 }
 
-.section-title {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  font-family: 'poppins-bold';
-  line-height: 150%;
-}
 
 .testimonials {
   display: flex;
@@ -165,10 +153,6 @@ const testimonials = [
     font-size: 18px;
   }
 
-  .section-title {
-    font-size: 24px;
-
-  }
 
   .testimonial-text {
     font-size: 14px;

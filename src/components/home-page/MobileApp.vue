@@ -6,7 +6,7 @@
           <span><font-awesome-icon icon="truck" /></span>
           Mobile App
         </h5>
-        <h2 class="title">Awesome App That Works For You</h2>
+        <h2 class="section-title">Awesome App That Works For You</h2>
         <p class="subtitle">
           FreightZone streamlines your delivery needs. Easily input your shipment information<br>
           and let us handle the rest. Our network of professional drivers ensures your package is<br>
@@ -16,7 +16,7 @@
         <!-- Download Buttons -->
         <div class="buttons">
           <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn" aria-label="Download on App Store">
-            <img src="../assets/imgs/apple.png" alt="Download on Apple App Store" class="store-icon" loading="lazy" />
+            <img src="@/assets/imgs/apple.png" alt="Download on Apple App Store" class="store-icon" loading="lazy" />
             <div class="store-text">
               <small>Download on the</small>
               <strong>App Store</strong>
@@ -24,7 +24,7 @@
           </a>
   
           <a href="https://play.google.com" target="_blank" class="store-btn" aria-label="Get it on Google Play">
-            <img src="../assets/imgs/google.png" alt="Get it on Google Play" class="store-icon" loading="lazy" />
+            <img src="@/assets/imgs/google.png" alt="Get it on Google Play" class="store-icon" loading="lazy" />
             <div class="store-text">
               <small>GET IT ON</small>
               <strong>Google Play</strong>
@@ -36,7 +36,7 @@
         <div class="cards">
           <!-- Card 1 -->
           <div class="card">
-            <img src="../assets/imgs/Delivery.png" alt="Speedy Delivery Illustration" loading="lazy" />
+            <img src="@/assets/imgs/Delivery.png" alt="Speedy Delivery Illustration" loading="lazy" />
             <div class="card-contant">
               <h3 class="card-title"><span class="gray-hash">#</span> Speedy Delivery FreightZone</h3>
               <p class="card-text">
@@ -58,7 +58,7 @@
   
           <!-- Card 2 -->
           <div class="card middle-card">
-            <img src="../assets/imgs/Delivery-sec.png" alt="Join the Revolution Image" loading="lazy" />
+            <img src="@/assets/imgs/Delivery-sec.png" alt="Join the Revolution Image" loading="lazy" />
             <div class="card-contant">
               <h3 class="card-title"><span class="red-hash">#</span> Join the Delivery Revolution</h3>
               <p class="card-text">
@@ -80,7 +80,7 @@
   
           <!-- Card 3 -->
           <div class="card">
-            <img src="../assets/imgs/Delivery-thr.png" alt="Welcome to FreightZone" loading="lazy" />
+            <img src="@/assets/imgs/Delivery-thr.png" alt="Welcome to FreightZone" loading="lazy" />
             <div class="card-contant">
               <h3 class="card-title"><span class="red-hash">#</span> Welcome to FreightZone</h3>
               <p class="card-text">
@@ -115,11 +115,6 @@
     background-color: #f9f9f9;
   }
   
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   
   .mobile-app-section h5 {
     font-size: 20px;
@@ -130,11 +125,6 @@
     margin-right: 5px;
   }
   
-  .title {
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 10px;
-  }
   
   .subtitle {
     font-family: 'Raleway', sans-serif;
@@ -312,7 +302,7 @@
       margin: 0 auto;
     }
   
-    .title {
+    .section-title {
       font-size: 24px;
       margin-bottom: 20px;
     }

@@ -11,19 +11,16 @@
         Service We Provide
       </h2>
 
-      <!-- Main section title -->
       <h3 class="section-title">Our Services To Explore</h3>
 
       <!-- Services grid layout -->
       <div class="services-grid">
-        <!-- Loop through each service item -->
         <article
           v-for="service in services"
           :key="service.title"
           class="service-card"
           :aria-label="service.title"
         >
-          <!-- Service icon with lazy loading for performance -->
           <img
             :src="service.icon"
             :alt="`${service.title} icon`"
@@ -31,10 +28,8 @@
             loading="lazy"
           />
 
-          <!-- Service title -->
           <h4 class="service-title">{{ service.title }}</h4>
 
-          <!-- Service description -->
           <p class="service-description">{{ service.description }}</p>
         </article>
       </div>
@@ -44,9 +39,9 @@
 
 <script setup>
 // Import service icons (local images)
-import carIcon from '../assets/car.png';
-import mapIcon from '../assets/map.png';
-import houseIcon from '../assets/house.png';
+import carIcon from '@/assets/imgs/car.png';
+import   houseIcon  from '@/assets/imgs/house.png';
+import mapIcon from '@/assets/imgs/map.png';
 
 // Define array of service objects
 const services = [
@@ -78,12 +73,6 @@ const services = [
   text-align: center;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .icon-style {
   color: red;
 }
@@ -91,7 +80,7 @@ const services = [
 .section-subtitle {
   font-size: 20px;
   font-weight: 600;
-  color: #dc2626;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,12 +89,6 @@ const services = [
   font-family: "poppins-bold";
 }
 
-.section-title {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 32px;
-  font-family: "poppins-bold";
-}
 
 .services-grid {
   display: grid;

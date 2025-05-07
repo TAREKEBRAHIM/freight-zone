@@ -35,9 +35,9 @@
 
 <script setup>
 // Import team member images
-import William from '@/assets/William.png'
-import Amelia from '@/assets/Amelia.png'
-import Andrew from '@/assets/Andrew.png'
+import William from '@/assets/imgs/William.png'
+import Amelia from '@/assets/imgs/Amelia.png'
+import Andrew from '@/assets/imgs/Andrew.png'
 
 // Define list of workers
 const workers = [
@@ -67,26 +67,13 @@ const workers = [
   text-align: center;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 .section-subtitle {
-  color: #e60073;
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  line-height: 1.3;
-  font-family: 'Poppins', sans-serif;
-}
 
 .workers {
   display: flex;

@@ -18,10 +18,9 @@
 <script setup>
 
 
-import orderIcon from '../assets/order.png';
-import warehouseIcon from '../assets/warehouse.png';
-import trackingIcon from '../assets/tracking.png';
-
+import orderIcon from '@/assets/imgs/order.png';
+import warehouseIcon from '@/assets/imgs/warehouse.png';
+import trackingIcon from '@/assets/imgs/tracking.png'
 
 const steps = [
   {
@@ -53,11 +52,6 @@ const steps = [
 
   <style scoped>
  
- .container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
- }
  
  
  .work-section {
@@ -67,9 +61,8 @@ const steps = [
   }
   
   .section-subtitle {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
-    color: #dc2626;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,11 +70,6 @@ const steps = [
     margin-bottom: 8px;
   }
   
-  .section-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 32px;
-  }
   
   .steps-grid {
     display: grid;

@@ -5,7 +5,7 @@
         <!-- Logo and Description -->
         <div class="footer-section">
           <div class="logo">
-            <img src="../assets/logo.png" alt="FreightZone Logo" />
+            <img src="../assets/imgs/logo.png" alt="FreightZone Logo" />
           </div>
           <p class="description">
             We understand that every business is unique, which is why we tailor our services to meet your specific needs.
@@ -65,11 +65,6 @@
   font-size: 14px;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 .footer-container {
   display: grid;

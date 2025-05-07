@@ -70,16 +70,10 @@
 
 <style scoped>
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
   /* hero section start */
 
 .hero {
-  background-image: url(../assets/landing.png);  
+  background-image: url(@/assets/imgs/landing.png);  
   background-size: cover;
   background-position: center;
   padding: 60px 60px;
@@ -146,7 +140,6 @@
   font-size: 24px;
 }
 
-
 .form-body {
   margin-top: 20px;
 }
@@ -205,7 +198,7 @@
 /* Media query for responsiveness on smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
   .hero {
-    background-image: url(../assets/mobile-landing.png); 
+    background-image: url(@/assets/imgs/mobile-landing.png); 
     background-size: cover;
     background-position: top center;
     background-attachment: scroll;

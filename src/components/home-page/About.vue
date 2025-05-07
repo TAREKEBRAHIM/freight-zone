@@ -2,11 +2,11 @@
   <div class="container">
     <div class="About">
       <div class="image">
-        <img src="../assets/delivery-man.png" alt="Image" />
+        <img src="@/assets/imgs/delivery-man.png" alt="delivery-man-Image" />
       </div>
       <div class="text-section">
         <p><span> <font-awesome-icon icon="truck" class="icon-style" />About FreightZone</span></p>
-        <h2>Fast, Secure, and Transparent <br>Logistics Services</h2>
+        <h2 class="section-title">Fast, Secure, and Transparent <br>Logistics Services</h2>
 
         <div class="text-item" v-for="(item, index) in textItems" :key="index">
           <img :src="item.image" alt="Text Image" class="text-image" />
@@ -21,8 +21,8 @@
   </div>
 </template>
 <script>
-import boxImg from '@/assets/box.png';
-import contactImg from '@/assets/contact.png';
+import boxImg from '@/assets/imgs/box.png';
+import contactImg from '@/assets/imgs/contact.png';
 export default {
   data() {
     return {
@@ -55,16 +55,10 @@ export default {
 
 
 <style scoped>
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .About {
   display: flex;
   justify-content: space-between;
-  
+
   margin: 50px 0;
 }
 
@@ -89,15 +83,6 @@ export default {
   gap: 15px;
   display: flex;
   flex-direction: column;
-}
-
-.text-section h2 {
-  line-height: 125%;
-  font-size: 40px;
-  margin: 0;
-  color: #333333;
-  padding-bottom: 20px;
-  font-family: 'poppins-extrabold';
 }
 
 
@@ -184,7 +169,7 @@ export default {
 
   .text-section h2 {
     text-align: center;
-font-size: 28px;
+    font-size: 28px;
 
   }
 }

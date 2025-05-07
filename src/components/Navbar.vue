@@ -20,7 +20,7 @@
     <nav class="main-nav">
       <div class="nav-container">
         <div class="logo">
-          <img src="../assets/logo.png" alt="FreightZone Logo" />
+          <img src="../assets/imgs/logo.png" alt="FreightZone Logo" />
         </div>
 
         <ul class="nav-links" :class="{ active: menuOpen }">
@@ -40,8 +40,8 @@
         </ul>
 
         <div class="cta-button">
-  <a href="#contact" class="btn-link">
-    Get A Quote<img src="../assets/logo.png" alt="freightzone logo" loading="lazy" />
+  <a href="#" class="btn-link">
+    Get A Quote
   </a>
 </div>
 
@@ -84,7 +84,7 @@ function toggleDropdown() {
   color: white;
   font-size: 14px;
   padding: 5px 0;
-  font-family: 'KumbhSans';
+
 }
 
 .top-bar-container {
@@ -167,11 +167,14 @@ height: 10px;
 
 .nav-links li {
   position: relative;
+text-transform: uppercase;
+color: #263238;
+font-family: 'cairo-bold';
 }
 
 .nav-links a, .nav-links span {
   text-decoration: none;
-  color: black;
+  color: #263238;
   font-weight: bold;
   cursor: pointer;
   padding-bottom: 5px;
